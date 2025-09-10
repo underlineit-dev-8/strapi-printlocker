@@ -13,21 +13,25 @@
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "upgrade:dry": "npx @strapi/upgrade latest --dry",
+    "build:win": "cross-env NODE_ENV=production npm run build"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.23.3",
     "@strapi/plugin-users-permissions": "5.23.3",
-    "@strapi/strapi": "5.23.3",
+    "@strapi/provider-upload-aws-s3": "^5.23.3",
+    "@strapi/strapi": "^5.23.3",
     "better-sqlite3": "11.3.0",
+    "cross-env": "^10.0.0",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
+    "mysql2": "^3.14.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
-  "devDependencies": {
+"devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -40,5 +44,9 @@
   "strapi": {
     "uuid": "6d8d284a-623a-4e45-9546-50d9da619ee3",
     "installId": "adc02f41747a6ab3bf1c6c3b62300364a08b16c62d324280d7c45dd70b6f889b"
-  }
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
