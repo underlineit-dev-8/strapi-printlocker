@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_banner2s",
+  "info": {
+    "displayName": "banner2"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "buttonText": {
+      "type": "string",
+      "required": true
+    },
+    "buttonUrl": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

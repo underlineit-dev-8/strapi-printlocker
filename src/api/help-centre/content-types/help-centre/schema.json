@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "help_centres",
+  "info": {
+    "singularName": "help-centre",
+    "pluralName": "help-centres",
+    "displayName": "Help-Centre"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "imageThumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "banner": {
+      "type": "component",
+      "component": "shared.banner",
+      "repeatable": false
+    },
+    "carousel": {
+      "type": "component",
+      "component": "shared.carousel-content",
+      "repeatable": false
+    },
+    "splitContent": {
+      "type": "component",
+      "component": "shared.split-content",
+      "repeatable": true,
+      "required": false,
+      "max": 2
+    },
+    "banner2": {
+      "type": "component",
+      "component": "shared.banner2",
+      "repeatable": false
+    },
+    "accordion": {
+      "type": "component",
+      "component": "shared.accordion",
+      "repeatable": true
+    },
+    "faq": {
+      "type": "component",
+      "component": "shared.faq",
+      "repeatable": true
+    }
+  }
+}

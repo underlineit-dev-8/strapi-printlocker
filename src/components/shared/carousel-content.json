@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_carousel_contents",
+  "info": {
+    "displayName": "carouselContent"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "component",
+      "component": "shared.content",
+      "repeatable": true,
+      "required": true,
+      "min": 3
+    }
+  },
+  "config": {}
+}
