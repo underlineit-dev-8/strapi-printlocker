@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_sub_sections",
+  "info": {
+    "displayName": "subSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.items",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

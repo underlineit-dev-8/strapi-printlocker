@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_shared_details",
+  "info": {
+    "displayName": "details"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "imageTitle": {
+      "type": "string",
+      "required": true
+    },
+    "imageDescription": {
+      "type": "text",
+      "required": true
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ]
+    },
+    "subSection": {
+      "type": "component",
+      "component": "shared.sub-section",
+      "repeatable": true,
+      "max": 0
+    },
+    "footer": {
+      "type": "component",
+      "component": "shared.footer",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

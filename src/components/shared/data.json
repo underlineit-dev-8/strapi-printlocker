@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_shared_data",
+  "info": {
+    "displayName": "data"
+  },
+  "options": {},
+  "attributes": {
+    "services": {
+      "type": "component",
+      "component": "shared.services",
+      "repeatable": true,
+      "required": true,
+      "min": 1
+    },
+    "products": {
+      "type": "component",
+      "component": "shared.services",
+      "repeatable": true
+    },
+    "clients": {
+      "type": "component",
+      "component": "shared.services",
+      "repeatable": true
+    },
+    "bannerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "challengeSection": {
+      "type": "component",
+      "component": "shared.challenge-section",
+      "repeatable": false,
+      "required": true
+    },
+    "corousel": {
+      "type": "component",
+      "component": "shared.corousel",
+      "repeatable": true,
+      "required": true,
+      "min": 3
+    },
+    "solutionSection": {
+      "type": "component",
+      "component": "shared.challenge-section",
+      "repeatable": false
+    },
+    "footerBanner": {
+      "type": "component",
+      "component": "shared.footer-banner",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

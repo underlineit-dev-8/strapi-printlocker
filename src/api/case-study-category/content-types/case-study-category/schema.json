@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_study_categories",
+  "info": {
+    "singularName": "case-study-category",
+    "pluralName": "case-study-categories",
+    "displayName": "Case-Study-Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "case_studies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::case-study.case-study",
+      "mappedBy": "case_study_category"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_challenge_sections",
+  "info": {
+    "displayName": "challengeSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}
