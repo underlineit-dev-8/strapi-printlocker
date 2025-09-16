@@ -4,6 +4,11 @@
     "displayName": "items"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "item": {
+      "type": "string",
+      "required": true
+    }
+  },
   "config": {}
 }

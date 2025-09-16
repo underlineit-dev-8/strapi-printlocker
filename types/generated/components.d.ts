@@ -191,7 +191,9 @@ export interface SharedItems extends Struct.ComponentSchema {
   info: {
     displayName: 'items';
   };
-  attributes: {};
+  attributes: {
+    item: Schema.Attribute.String & Schema.Attribute.Required;
+  };
 }
 
 export interface SharedListItems extends Struct.ComponentSchema {
