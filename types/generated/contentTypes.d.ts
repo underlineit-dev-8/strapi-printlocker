@@ -770,6 +770,10 @@ export interface ApiNewsCategoryNewsCategory
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
+    news_contents: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::news-content.news-content'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -783,7 +787,7 @@ export interface ApiNewsCategoryNewsCategory
 export interface ApiNewsContentNewsContent extends Struct.CollectionTypeSchema {
   collectionName: 'news_contents';
   info: {
-    displayName: 'NewsContent';
+    displayName: 'News-Content';
     pluralName: 'news-contents';
     singularName: 'news-content';
   };
@@ -803,6 +807,10 @@ export interface ApiNewsContentNewsContent extends Struct.CollectionTypeSchema {
       'api::news-content.news-content'
     > &
       Schema.Attribute.Private;
+    news_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::news-category.news-category'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "news-content",
     "pluralName": "news-contents",
-    "displayName": "NewsContent"
+    "displayName": "News-Content"
   },
   "options": {
     "draftAndPublish": true
@@ -37,6 +37,12 @@
       "component": "shared.details",
       "repeatable": false,
       "required": true
+    },
+    "news_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::news-category.news-category",
+      "inversedBy": "news_contents"
     }
   }
 }

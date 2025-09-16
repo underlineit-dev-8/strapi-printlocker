@@ -19,6 +19,12 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "news_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::news-content.news-content",
+      "mappedBy": "news_category"
     }
   }
 }

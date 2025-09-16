@@ -37,8 +37,7 @@
     "subSection": {
       "type": "component",
       "component": "shared.sub-section",
-      "repeatable": true,
-      "max": 0
+      "repeatable": true
     },
     "footer": {
       "type": "component",

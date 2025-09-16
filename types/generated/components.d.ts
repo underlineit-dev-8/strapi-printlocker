@@ -143,13 +143,7 @@ export interface SharedDetails extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     imageDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     imageTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    subSection: Schema.Attribute.Component<'shared.sub-section', true> &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 0;
-        },
-        number
-      >;
+    subSection: Schema.Attribute.Component<'shared.sub-section', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     video: Schema.Attribute.Media<'files' | 'videos'> &
       Schema.Attribute.Required;
