@@ -63,6 +63,12 @@
       "type": "component",
       "component": "shared.faq",
       "repeatable": true
+    },
+    "help_centre_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::help-centre-category.help-centre-category",
+      "inversedBy": "help_centres"
     }
   }
 }

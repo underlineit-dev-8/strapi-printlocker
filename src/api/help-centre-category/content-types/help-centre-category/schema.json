@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "help_centre_categories",
+  "info": {
+    "singularName": "help-centre-category",
+    "pluralName": "help-centre-categories",
+    "displayName": "Help-Centre-Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "help_centres": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::help-centre.help-centre",
+      "mappedBy": "help_centre_category"
+    }
+  }
+}

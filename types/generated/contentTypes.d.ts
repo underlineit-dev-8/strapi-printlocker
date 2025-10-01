@@ -677,6 +677,42 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiHelpCentreCategoryHelpCentreCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'help_centre_categories';
+  info: {
+    displayName: 'Help-Centre-Category';
+    pluralName: 'help-centre-categories';
+    singularName: 'help-centre-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    help_centres: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::help-centre.help-centre'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::help-centre-category.help-centre-category'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHelpCentreHelpCentre extends Struct.CollectionTypeSchema {
   collectionName: 'help_centres';
   info: {
@@ -697,6 +733,10 @@ export interface ApiHelpCentreHelpCentre extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.String & Schema.Attribute.Required;
     faq: Schema.Attribute.Component<'shared.faq', true>;
+    help_centre_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::help-centre-category.help-centre-category'
+    >;
     imageThumbnail: Schema.Attribute.Media<'images'> &
       Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1414,6 +1454,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::faq.faq': ApiFaqFaq;
       'api::global.global': ApiGlobalGlobal;
+      'api::help-centre-category.help-centre-category': ApiHelpCentreCategoryHelpCentreCategory;
       'api::help-centre.help-centre': ApiHelpCentreHelpCentre;
       'api::item.item': ApiItemItem;
       'api::news-category.news-category': ApiNewsCategoryNewsCategory;
